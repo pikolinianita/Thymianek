@@ -15,7 +15,7 @@
     <description>Fun with Thymeleaf</description>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>12</java.version>
         <sonar.projectKey>pikolinianita_Thymianek</sonar.projectKey>
         <sonar.organization>pikolinianita</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
