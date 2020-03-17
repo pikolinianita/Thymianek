@@ -20,9 +20,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 13
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
-    
+        
     - name: Cache Maven packages
       uses: actions/cache@v1
       with:
@@ -34,13 +32,5 @@ jobs:
       run: mvn verify sonar:sonar  
       env:
         GITHUB_TOKEN: ${{ github.token }} 
- 
-    - name: Report Maven
-      run: mvn site -s $GITHUB_WORKSPACE/settings.xml
-      
-    - name: upload report
-      uses: actions/upload-artifact@v1
-      with:
-        name: Tests Results
-        path: target/site/
-      continue-on-error: true 
+          
+    
